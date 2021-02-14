@@ -115,8 +115,8 @@ class FaceCamera(Camera):
         # convert image to np.array without alpha channel
         arr = np.array(im)[:,:,:3]
         # get face locations from the resized image
-        locations = fr.face_locations(arr, number_of_times_to_upsample=1,
-                                      model="hog")
+        locations = fr.face_locations(arr, number_of_times_to_upsample=1)#,
+                                      #model="hog")
         # get face encodings for identification
         encodings = fr.face_encodings(arr, known_face_locations=locations,
                                       num_jitters=1)
@@ -125,7 +125,7 @@ class FaceCamera(Camera):
         faces = []
         for enc in encodings:
             # get name of the person
-            matches = fr.compare_faces(self._known_faces, enc, tolerance=0.8)
+            matches = fr.compare_faces(self._known_faces, enc)#, tolerance=0.8)
             name = "Unknown"
 
             # use the first match which is found
