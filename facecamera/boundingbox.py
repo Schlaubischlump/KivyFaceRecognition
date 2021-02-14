@@ -50,7 +50,7 @@ class BoundingBox(FloatLayout):
 
     label = ObjectProperty(None)
     '''
-    Text color of the label which displays the name of a person.
+    Label which displays the name of a person.
     '''
 
     name = StringProperty("Unknown")
