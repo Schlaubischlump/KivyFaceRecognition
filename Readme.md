@@ -6,3 +6,4 @@ This repository contains a simple example application to demonstrate realtime fa
 - [pillow](https://github.com/python-pillow/Pillow)    
 - [face_recognition](https://github.com/ageitgey/face_recognition)    
 
+You should replace the `Test.png` file with a file of a person you want to identify. You can register multiple persons if you change the source code to add more than one file.
